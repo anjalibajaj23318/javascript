@@ -1,0 +1,87 @@
+<html>
+<head>
+ <title>Complete JavaScript Course</title>
+    
+</head>
+
+<body>
+    <div id="message">Complete JavaScript Course</div>
+    <input type="text" id="str">
+    
+    <input type="button" value="Replace" onclick="replace()">
+
+<script>
+
+    
+   var message=document.getElementById("message"); 
+ var myarray=["java","css","html","water","wattpad","hello","world","course"]; 
+window.onload=sword;
+var randomword;
+function sword(){
+//random  item from an array
+
+var random=myarray[Math.floor(Math.random()*myarray.length)];
+    randomword=random;
+message.innerHTML=random.toLowerCase();
+var s="";
+    var randomlength=random.length;
+for(var x=0;x<randomlength;x++)
+    {
+
+     var i=Math.floor(Math.random()*random.length); 
+  s+= random[i];
+random=random.substr(0,i)+random.substr(i+1);
+    }
+    message.innerHTML=s;
+}
+   
+function replace(){
+var guess=document.getElementById("str").value;
+if(guess==randomword){
+    message.innerHTML="You are correct";
+    
+}
+    else{
+      message.innerHTML="You are wrong";   
+    }
+}
+
+   
+    
+
+    
+     /*
+ var m=document.getElementById("str").value;
+    console.log(m);
+var c=message.innerText;
+
+c=c.replace("JavaScript",m);
+message.innerHTML=c; 
+}
+    
+function guess(){
+ var input=document.getElementById("str");
+var length=document.getElementById("length").value;
+if(input.length==length){
+document.getElementById("message").innerHTML="You are correct";
+}
+    else{
+  document.getElementById("message").innerHTML="You are wrong";      
+    }
+}
+    
+
+    
+    
+    
+  
+ var a=400;
+    var b="Hello World";
+    var c="https://www.google.co.in?id=1000&n=500";
+    var d="400";
+  var e=encodeURIComponent(c);  
+   var f=decodeURIComponent(e); 
+    */
+    </script>
+    </body>
+</html>

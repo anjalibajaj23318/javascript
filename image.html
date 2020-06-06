@@ -1,0 +1,43 @@
+
+<html>
+    <head>
+        <title>Complete javascript</title>
+    </head>
+<body onload="startimg()">
+    <div id="wrapper">Complete Javascript Course</div>
+    <img id="myimage">
+    <script>
+        //image carousel
+    var imageplace=0;
+    var images=["1","2","3","4","5","6","7","8","9","10"];
+    var imagesc=["111","222","FFF0000","000FF00","000FF","333"];
+        function startimg(){
+            myimage.src="http://via.placeholder.com/350x150/"+imagesc[imageplace]+"/fff?text=image"+images[imageplace];
+        
+            setInterval(swimage,1000);
+            
+        }
+        
+    function swimage(){
+    imageplace++;
+    if(imageplace>=images.length)
+        {
+            imageplace=0;
+        }
+    var myimage=document.getElementById("myimage");
+    myimage.src="http://via.placeholder.com/350x150/"+imagesc[imageplace]+"/fff?text=image"+images[imageplace];
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    </script>
+    
+    
+    </body>
+
+</html>

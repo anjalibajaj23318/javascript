@@ -1,0 +1,143 @@
+<html>
+<head>
+    <style>
+        .btn{
+            height:50px;
+            width: 100px;
+            background-color: red;
+            color: white;
+            border-radius: 15px;
+            font-size: 1.2em;
+            }
+        .box{
+        height:100px;
+            width: 100px;    
+           text-align: :center;
+            border: 1px solid black;
+            display: inline-block;
+        }
+    </style>
+    <body>
+    
+    <input type="button" value="Start" onclick="onstart()" class="btn">
+    <div id="message1">Welcome</div>
+    <div id="message2"> Click Start</div>
+    <div id="output"></div>
+        
+        
+<script>
+        
+  var myarray=[];
+    var people=["Laurence","mike","john","larry","kim","joanne","lisa","janel","jane"];
+  var key;
+    
+    function onstart(){
+myarray=people.slice();
+        console.log(myarray);
+     myarray.sort(function(a,b){
+                  
+   return 0.5-Math.random();               
+                  });
+        console.log(myarray);
+        build();
+        findperson();
+    //build out game area
+    //run find the name
+        
+    }
+    
+    function findperson(){
+        key=myarray[Math.floor(Math.random()*myarray.length)];
+        message1("find this name<br>"+key);
+    }
+       function build()
+    {
+        var html="<h1>Name Game</h1>";
+        for(var x=0;x<myarray.length;x++)
+            {
+                var str=myarray[x];
+                var shuffled=str.split("").sort(function(){
+                    return 0.5 -Math.random()
+                    
+                }).join('');
+               html+= '<div class="box" onmouseover="utext(this,\''+shuffled+'\')" onmouseout="utext(this,\'Hidden'+(x+1)+'\')"onclick="eele(this,\''+str+'\')">Hidden'+(x+1)+'</div>';
+            }
+        
+        document.getElementById("output").innerHTML=html;
+    }
+        function utext(t,mes){
+        t.innerHTML=mes;    
+            
+        }
+    function eele(t,str){
+        if(str==key)
+            {
+                var n=myarray.indexOf(str);
+                //correct;
+                message2('correct');
+                t.parentNode.removeChild(t);
+                myarray.splice(n,1);
+                findperson();
+            }
+        else{
+            message2('wrong');
+     
+        }
+        if(myarray.length<=0)
+            {
+                message1("Game is over");
+            }
+    }
+    function message1(message)
+    {
+        document.getElementById("message1").innerHTML=message;
+    }
+    function message2(message)
+    {
+        document.getElementById("message2").innerHTML=message;
+    }
+        
+        
+        
+        </script>        
+        
+        
+    </body>
+    
+    
+    
+    </head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

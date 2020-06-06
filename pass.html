@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    
+</head>
+
+<body>
+
+<div id="Message">Counter</div><br>
+<img name="slide" src="contBcg-0.jpeg"></div><br>    
+ <input type="button" value="lower" onclick="lower()"><br>
+<input type="button" value="upper" onclick="upper()">
+<script>
+ var arr=["contBcg-0.jpeg","contBcg-1.jpeg","contBcg-2.jpeg"];
+var val=document.getElementById("value");
+function lower(){
+for(var x=0;x<arr.length;x++){
+document.slide.src=arr[x];
+}
+
+}
+    
+    
+function upper(){
+for(var x=arr.length;x>0;x--){
+document.slide.src=arr[x];
+}
+
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+    </body>
+</html>

@@ -1,0 +1,682 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <a href="index.html">Index</a>
+        <div id="output"></div>
+        <input type="button" onclick="goback()" value="back">
+    </div>
+    <script>
+     
+      /*  for(var prop in window)
+        {
+            document.write(prop+""+window[prop]+"<br>");
+        }*/
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /*
+        var suits = ["spades", "hearts", "clubs", "diams"];
+        var cardFace = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
+        var players = [];
+
+        function startDeal() {
+            players = [];
+            var num = Number(document.getElementById("players").value);
+            for (var i = 0; i < num; i++) {
+                players[i] = [];
+            }
+            var cards = buildCards();
+            shuffleCards(cards);
+            deal(cards);
+        }
+
+        function buildCards() {
+            var cards = [];
+            for (s in suits) {
+                var bgColor = (suits[s] == "hearts" || suits[s] == "diams") ? "red" : "black";
+                for (c in cardFace) {
+                    var card = {
+                        suit: suits[s]
+                        , num: cardFace[c]
+                        , bgColor: bgColor
+                        , v: (Number(c) + 2)
+                    }
+                    cards.push(card);
+                }
+            }
+            return cards;
+        }
+
+        function shuffleCards(array) {
+            for (var x = array.length - 1; x > 0; x--) {
+                var ii = Math.floor(Math.random() * (x + 1));
+                var temp = array[x];
+                array[x] = array[ii];
+                array[ii] = temp;
+            }
+            return array;
+        }
+
+        function deal(cards) {
+            var num = players.length;
+            var output = document.getElementById("output");
+            var p = 0;
+            for (var i = 0; i < cards.length; i++) {
+                players[p].push(cards[i]);
+                p++;
+                if (p >= num) {
+                    p = 0;
+                }
+            }
+            for (var i = 0; i < num; i++) {
+                output.innerHTML += "<br>Players : " + (i + 1) + "<br>";
+                for (var x = 0; x < players[i].length; x++) {
+                    var p = players[i][x];
+                    output.innerHTML += "<span style=\"color:" + p.bgColor + "\">" + p.num + "&" + p.suit + ";</span>";
+                }
+                output.innerHTML += "<br>";
+            }
+        }
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+ /*  var output=document.getElementById("output");
+ var num1=document.getElementById("item1");
+var num2=document.getElementById("ïtem2");
+        
+function add(){
+ outc(Number(num1.value),Number(num2.value),"+",function(a,b){
+     
+     return a+b;
+ }) 
+    
+} 
+function outc(a,b,s,cback)
+{var result=cback(Number(a),Number(b));
+ output.innerHTML+=a+""+s+""+b+"="+result+"<br>";
+}
+
+
+
+
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+/*function  makemessage(s1,s2,callback)
+{
+    var result=callback(s1,s2);
+    output.innerHTML=result;
+    
+}
+makemessage("hello","world",function(a,b){
+    var result2=s1+s2+"worked";
+    return result2;
+    
+})
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+/*var shoppinglist=[];
+        
+function additem(){
+    
+  var additem=document.getElementById("item").value; 
+    shoppinglist.push(additem);
+   outputlist() ;   
+}    
+        
+function outputlist(){
+var html=""    
+var output=document.getElementById("output");  
+for(var x=0;x<shoppinglist.length;x++){
+    html+=(x+1)+"."+shoppinglist[x];
+}    
+output.innerHTML=html;    
+}
+        outputlist();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /*var a=1000;
+function outsidefun(){
+ var b=2000;
+function insidefun(){
+b++;
+return b;    
+}
+    insidefun()
+var c=insidefun();
+console.log(c);
+}
+outsidefun();        
+insidefun();        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        var output=document.getElementById("output");  
+var myarray=["hello","world",123,3452,123,"javascript","hello","hello","world",123,3452,123,"javascript","hello"]; 
+var myarrayclean=removeduplicates(myarray);
+output.innerHTML=myarray+"<br>"+myarrayclean;
+ function removeduplicates(arr)
+{
+var z="";
+var carray=[];
+var cobject={};
+for(var x=0;x<arr.length;x++){
+cobject[arr[x]]="whatver";
+}
+    console.log(cobject);
+for(z in cobject){
+console.log(z);    
+carray.push(z);
+    
+}
+ return carray;   
+    
+    
+}
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+           var secretword=["Javascript","words","god"];
+         var mystery;
+        var output=document.getElementById("output");
+      function start()
+        {
+shufflearray(secretword);
+            output.innerHTML+=secretword+"<br>";
+        }
+function shufflearray(arr)
+        {
+            for(var x=arr.length-1;x>0;x--){
+                
+ var holder=Math.floor(Math.random()*(x+1));   
+    var temp=arr[x];
+    arr[x]=arr[holder];
+    arr[holder]=temp;
+            }
+            return arr;
+        }
+        
+        
+        var a="hello";
+        (function(){
+           var a="world";
+            document.getElementById("output").innerHTML=a;
+        })(); 
+         //document.getElementById("output").innerHTML+=a;
+        var cCode=[];
+     var count=0;
+var c1=document.getElementById("number1");
+var c2=document.getElementById("number2");
+var c3=document.getElementById("number3");    for(var x=0;x<3;x++)
+{
+cCode.push(Math.floor(Math.random()*9)) ;   }
+document.getElementById("output").innerHTML=cCode;
+               
+function codecheck()
+        {
+            
+            count=0;
+            var guess=[Number(c1.value),Number(c2.value),Number(c3.value)];
+            for(var x=0;x<cCode.length;x++)
+                {
+            document.getElementById("output").innerHTML+=checknum(guess[x],cCode[x]);
+                }
+            if(count==3)
+                {
+                    document.getElementById("output").innerHTML+="You guessed it <br>";
+                }
+        }
+function checknum(a,b)
+        {
+      if(a>b) 
+          {
+              return "L";
+          }
+            else if(a<b)
+                {
+return "H";
+                }
+            
+        else{
+            count++;
+return a;}
+}
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+    /* var num1=document.getElementById("num1");
+               
+var num2=document.getElementById("num2");
+               
+function Subtractby(){
+     var a=Number(num1.value);
+    var b=Number(num2.value);
+    outhtml(a,b);           
+}
+    
+
+function outhtml(a,b)
+{
+    document.getElementById("output").innerHTML=a-b;
+    
+}
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+            var adjective=["super","wonderful",
+                "amazing","poor","bad","angry"];
+               var random=Math.floor(Math.random()*adjective.length);
+   console.log(random); 
+               function myFun(){var question=prompt("what is your name");
+                                
+       document.getElementById("output").innerHTML+=adjective[random]+" "+question+"<br>";
+               
+                               }
+         var a="hello";
+        
+        myfunction();
+        function myfunction()
+        {
+            
+            var b="World";
+            
+            document.getElementById("output").innerHTML=a+" "+b;
+        }
+        
+        
+        var response =55;
+            var a=myfunction1();  
+
+        myfunction1(1,2,4);
+        function myfunction1(a,b,c)
+        {
+           response=a+b+c;
+        document.getElementById("output").innerHTML=response;
+             return response;
+}
+        
+        
+       
+        
+        var additem;
+        var 
+        shoppinglist=[];
+        var number=prompt("how many times");
+        
+   for(var i=0;i<number;i++){
+    additem=prompt("what do you want to add");
+       if(additem=="no"){
+           break;
+       }
+       shoppinglist.push(additem);
+       
+       }
+        
+        for(myitem of shoppinglist){
+            
+        document.getElementById("output").innerHTML+=myitem+"<br>";
+            }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        var x={
+           a:"mike",
+           b:"john",
+           c:"larry"
+       
+       };
+        for(var i in x)
+       { document.getElementById("output").innerHTML+=x[i]+"<br>";
+       }
+          var total=0,i;
+        for(var x=0;x<1000;x++)
+            {
+                if(x%5==0)
+                    {
+                        document.getElementById("output").innerHTML=x;
+total+=x;                       
+                    }
+                
+                
+            }
+         document.getElementById("output").innerHTML=x;
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      var row=0,col=0;
+        var html="<table>";
+        for(row=0;row<10;row++)
+            {
+             html+="<tr>";
+                for(col=0;col<10;col++)
+                    {
+                      html+="<td>Cell="+((col+1)+(row*5))+"</td>"; 
+                        
+                    }
+                html+="</tr>";
+                
+            }
+        html+="</table>";
+        document.getElementById("output").innerHTML=html;
+        
+         var answer="javascript";
+        var secretcode=prompt("secret word");
+        
+        while(secretcode!=answer){
+secretcode=prompt("guess again");
+        };
+        document.getElementById("output").innerHTML+="final output";
+        
+       
+     var player =prompt("do you choose rock paper scissor");
+         var ps=player.charAt(0).toUpperCase();
+        var win=false;
+        var computer=Math.random();
+       
+        if(computer<0.34)
+            {
+                computer="rock";
+            }
+        else if(computer<0.67)
+            {
+                computer="paper";
+            }
+        else{
+            computer="scissor"
+        }
+        //console.log(computer);
+        var cs=computer.charAt(0).toUpperCase();
+        if(cs==ps)
+            {
+                document.getElementById("output").innerHTML="it is a tie";
+            }
+        else if(ps=="R")
+            {
+                if(cs=="S")
+                    {
+                        win=true;
+                    }
+            }
+        else if(ps=="P"){
+          if(cs=="R")
+              {
+                 win=true; 
+              }
+            else{
+                if(cs=="S"){
+                    win=true;
+                }
+            }
+        }
+        if(win)
+        {
+            
+            document.getElementById("output").innerHTML="Player win";
+        }
+        else{
+            document.getElementById("output").innerHTML="computer wins";
+        }
+    /* var mytime=prompt("what is the time");
+        document.getElementById("value").value=mytime;
+        var output=document.getElementById("output");
+        if(mytime>12)
+            {
+                output.innerHTML="wake up";
+            }
+        else
+        {
+            output.innerHTML="go to sleep";
+        }
+       // var z= document.getElementById("value");
+        
+        //z.value=document.getElementById("output").innerHTML;
+   
+        //output.innerText="Hello <br> World";
+        
+        //var a=document.getElementById("output");
+        //var z= prompt("What is your name?");
+        //a.innerHTML="Welcome to the page"+ z;
+        */
+    </script>
+    </body>
+</html>

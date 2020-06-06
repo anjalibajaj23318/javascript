@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+   <style>
+       td{
+           border: 1px solid #ddd;
+           padding: 10px;
+       }
+    
+    
+    </style>
+    
+</head>
+
+<body>
+<div id="message">Complete Javascript Courses</div>
+<div>
+    <input type="text" id="addFriend"><input type="button" id="addnew" value="Add friend"></div>
+<div id="output"></div>    
+<script>
+window.onload=build;
+var el=document.getElementById("message");
+var message=document
+.getElementById("message");
+ var myarray=["Laurence","Mike","John","Larry","Kim","Joanne","Lisa","Janel","Jane"];  
+var addnew=document.getElementById("addnew");
+   
+addnew.onclick=function(){
+  var q=document.getElementById("addFriend").value;
+myarray.push(q);
+
+//add it to the array
+//add it to the html
+var tr=document.createElement("tr");
+var td=document.createElement("td");
+tr.appendChild(td);
+var tdtext=document.createTextNode("10");
+td.appendChild(tdtext);
+var container=document.querySelector("#output table");
+console.dir(container);
+console.dir(tr);
+}
+function build(){
+var html="<h1>My friends Table</h1><table>";
+for(var x=0;x<myarray.length;x++)
+    {
+        html+="<tr data-row="+x+" data-vote="+0+"><td>"+myarray[x]+"</td><td class='box' data-row="+x+">"+(x+1)+"</td><td>0</td></tr>";
+ }
+    html+="</table>";
+    document.getElementById("output").innerHTML=html;
+    var elbox=document.querySelectorAll("#output .box");
+    for(var x=0;x<elbox.length;x++){
+    elbox[x].onclick=function(){
+        
+//a=this.parentElement.getAttribute('data-row'); 
+a=this.closest("[data-row]").getAttribute("data-row");
+
+ //console.log(myarray[a]);  
+message.innerHTML=myarray[a]+"is on row number #"+a;
+ v=this.closest("[data-vote]").getAttribute("data-vote");
+        v++;
+console.log(v);
+this.parentElement.lastElementChild.innerHTML=v;
+this.parentElement.setAttribute("data-vote",v);
+    }   
+        
+    }
+}
+    
+    
+    
+    
+    
+    
+</script>
+</body>
+</html>

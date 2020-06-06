@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    
+</head>
+
+<body>
+
+<div id="Message">Complete Javascript Course</div><br>
+<form name="myform">
+<textarea id="txtar" rows=12 cols=100></textarea>
+<input type="button" onclick="lookup()" value="Get Email">
+
+</form>
+       <script>
+ function lookup(){
+    var raw=document.myform.txtar.value; var p=new RegExp("Java"); 
+var result=p.exec(raw);
+    console.log(result);
+ }   
+ 
+    </script>
+    </body>
+</html>

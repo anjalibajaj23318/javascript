@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+<style>
+.box{
+    height:100px;
+    width:100px;
+    padding: 20px;
+    margin: 0 50px;
+    display: inline-block;
+    border:1px solid black;
+    }
+    #getel{
+        background-color: red;
+    }
+    </style>
+    </head>
+
+<body>
+    <div id="wrapper">Complete JavaScript Course</div>
+    <div class="box" ondrop="ddrop()" ondragover="ndrop()">1<div id="getel" ondragstart="dstart()" draggable="true">DragMePlease</div></div>
+      <div class="box" ondrop="ddrop()" ondragover="ndrop()">2</div>
+      <div class="box" ondrop="ddrop()" ondragover="ndrop()">3</div>
+      <div class="box" ondrop="ddrop()" ondragover="ndrop()">4</div>
+    <form>
+        <script>
+        var holderitem;
+            
+          function dstart(){
+              message("drag strated");
+              holderitem=event.target;
+          } 
+            function ndrop()
+            {
+                event.preventDefault();
+            }
+            
+            function ddrop(){
+                event.preventDefault();
+                message("drop it");
+                if(event.target.className=="box"){
+                    
+                event.target.appendChild(holderitem);    
+                }
+            }
+            
+            function message(m)
+       {
+            
+            document.getElementById("wrapper").innerHTML=m
+        }
+         
+        
+        </script>

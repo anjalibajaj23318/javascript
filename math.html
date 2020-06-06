@@ -1,0 +1,64 @@
+<html>
+<head>
+ <title>Complete JavaScript Course</title>
+    
+</head>
+
+<body>
+    <div id="message">Complete JavaScript Course</div>
+<input type="date" onchange="start()">
+
+    <div id="output"></div>
+   
+<script>
+var cdate, edate,s,m,h,d,t;
+var message=document.getElementById("message");
+var output=document.getElementById("output");
+    
+    
+    
+    
+    
+    
+    
+    function start(){
+    var tdate=event.target.valueAsDate;
+message.innerHTML=tdate;    
+cdate=new Date();
+edate=new Date(tdate);
+ 
+  outputUpate();      
+        
+    
+t=window.setTimeout(update,1000);
+}
+function update(){
+  cdate=new Date();
+  outputUpate();      
+           
+t=window.setTimeout(update,1000);    
+}
+function outputUpate()
+    {
+cdate=new Date();
+    var dur=edate-cdate;
+s=Math.floor((dur%(1000*60))/1000);
+m=Math.floor((dur%(1000*60*60))/1000*60);
+ output.innerHTML=s;   
+    
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+    </body>
+</html>
+

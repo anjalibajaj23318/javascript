@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+   
+</head>
+
+<body onload=start()>
+    <div id="message">Message1</div>
+<div class="output">Test Me 1</div>
+<div class="output">Test Me 2</div>
+<div id="pickme">
+<div class="output highlight">Test Me 3</div>
+    </div>
+<input type="text" name="first">
+<input type="text" name="last">
+    <input type="text" name="querystuff" id="querystuff">
+    <input type="button" onclick="myself()"  value="Get Query">
+    <div id="pickme2">
+    <div class="output">Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4</div>
+<div class="output">Test Me 5</div>
+<div class="output">Test Me 6</div>
+    </div>
+<div class="output highlight">Test Me 7</div>
+<div class="output">Test Me 8</div>
+<div class="output">Test Me 9</div>
+<div class="output">Test Me 10</div>
+<script>
+    var el=document.querySelectorAll(".output");
+    var background=["red","blue","green","pink","yellow","purple"];
+  var c;
+    var message=document.getElementById("message");
+ function swap()
+    {
+     for(var x=0;x<el.length;x++)
+    {
+c=background[Math.floor(Math.random()*background.length)];
+     el[x].style.backgroundColor=c; 
+    }   
+        
+    }
+function start(){
+   setInterval(swap,1000);  
+}
+    
+
+    </script>
+    </body>
+</html>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

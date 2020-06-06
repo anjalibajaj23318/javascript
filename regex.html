@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    
+</head>
+
+<body>
+
+<div id="Message">Complete Javascript Course</div><br>
+    
+<input type="button" onclick="myfun()" value="Validation input">
+<input type="text" id="email" value="email@gmail.com">
+<input type="text" id="number" value="15544564564">
+<input type="text" id="char" value="anjali">
+<script>
+
+var output=document.getElementById("Message");    
+var str="ajagjgf hjhjzfv Javascript 22222371979 hdsjhjdshjsd Javascript 337378 Javascript";
+function cemail(e){
+ var p=/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z.]+)/ig;
+var r=e.match(p);
+return t=r==null?false:true;
+
+}
+    function cnum(e){
+    var p=/\D/;
+var r=e.match(p);
+return t=r==null?false:true;
+
+}     
+    
+    
+    function cchar(e){
+   var p=/([^A-Za-z])/ig;
+var r=e.match(p);
+return t=r==null?true:false;
+
+} 
+function myfun(){
+var i=document.getElementsByTagName("input");
+for(var x=0;x<i.length;x++){
+console.log(i[x]);
+ if(i[x].type=="text"){
+ if(i[x].id=="email"){
+     if(cemail(i[x].value)){
+      console.log("Email is valid");  
+        }
+     else{
+     console.log("Email is invalid");      
+     }
+ } 
+
+ if(i[x].id=="number"){
+if(cnum(i[x].value)){
+      console.log("num is valid");  
+        }
+     else{
+     console.log("num is invalid");      
+     } } 
+
+ if(i[x].id=="char"){
+     if(cchar(i[x].value)){
+      console.log("cahracter is valid");  
+        }
+     else{
+     console.log("character is invalid");      
+     }
+ } 
+     
+ }   
+}
+
+}
+</script>
+    </body>
+</html>

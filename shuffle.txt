@@ -1,0 +1,228 @@
+function shufflearray(arr)
+        {
+            for(var x=arr.length-1;x>0;x--){
+                
+ var holder=Math.floor(Math.random()*(x+1));   
+    var temp=arr[x];
+    arr[x]=arr[holder];
+    arr[holder]=temp;
+            }
+            return arr;
+        }
+        
+ function removeduplicates(arr)
+{
+var z="";
+var carray=[];
+var cobject={};
+for(var x=0;x<arr.length;x++){
+cobject[arr[x]]="whatver";
+}
+    console.log(cobject);
+for(z in cobject){
+console.log(z);    
+carray.push(z);
+    
+}
+  window.onload=function(event){
+       myfun('window');     
+function myfun(a){
+document.getElementById("wrapper").innerHTML="WELCOME ALL LOADED"+a;  
+}
+
+            <input type="button" onclick="myvalue()" value="value">
+            
+             <input type="button" id="id1" value="click1">
+      <input type="button" id="id2" value="click2">
+      
+            <input type="button" id="id3" value="value">
+       
+    </form>
+    
+     firstname:<input type="text" id="e1" value="Laurence" onblur="ofun()"><br>
+    lastname:<input type="text" id="e2" value="smith" onblur="ofun()"><br>
+    <input type="button" onclick="sendinfo()" value="submit">
+    </form>
+     <form>
+      firstname:<input type="text" id="e1" ><br>
+    lastname:<input type="text" id="e2" ><br>
+    <input type="button" onclick="sendinfo()" value="submit">
+    
+    function ofun(){
+ var p=event.target.parentElement;  
+if(p.id=="e1"){
+    message("Chnaged to"+p.e1.value);  
+  }   
+        else{
+    message("Chnaged to"+p.e2.value);  
+  }   
+}
+function sendinfo(){
+    var p=event.target.parentElement;
+     
+message(p.e1.value+" "+p.e2.value);
+}
+
+function message(m){
+
+document.getElementById("wrapper").innerHTML=m;}
+
+
+
+var outputlist=document.getElementsByClassName("output"); 
+    var highclass=document.getElementsByClassName("highlight");
+    
+    for(var x=0;x<outputlist.length;x++)
+{
+ 
+outputlist[x].onclick=function(){
+   
+ message.innerHTML=event.target.innerHTML;   
+}
+    
+}
+    for(var x=0;x<highclass.length;x++)
+{
+
+   
+highclass[x].onclick=function(){
+ message1.innerHTML="CLICKED HIGHLIGHTED";   
+}
+    
+}
+<style>
+      .holder{
+            display: inline-block;
+            width:300px;
+            height: 300px;
+            border: 1px solid black;
+            padding: 10px;
+            
+        }
+        .active {
+            background-color: red;
+        }
+    </style>
+    
+to check the 
+var random=myarray[Math.floor(Math.random()*myarray.length)];
+    randomword=random;
+message.innerHTML=random.toLowerCase();
+var s="";
+    var randomlength=random.length;
+for(var x=0;x<randomlength;x++)
+    {
+
+      i=Math.floor(Math.random()*random.length); 
+  s+= random[i];
+random=random.substr(0,i)+random.substr(i+1);
+
+
+
+
+
+
+
+var p=/javascript/ig;  
+var r = str.match(p);
+r.forEach(function(e){
+ console.log(e);   
+    
+    function lookup(){
+  var s=document.getElementById("Message").innerText;  
+var str=document.getElementById("stext").value ;
+ 
+var rtr=document.getElementById("rtext").value;
+var re=new RegExp(str,"ig") 
+
+var result=s.match(re);
+    if(result){
+       var rr= s.replace(re,rtr);
+   document.getElementById("Message").innerText=rr;     
+    }
+    console.log(result);
+}
+ var raw=document.myform.txtar.value;  
+var edata=raw.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z.]+)/ig);
+   console.log(edata);
+ var html="";
+    var holder=[];
+//document.myform.textarea.value=edata.toString();
+for(var x=0;x<edata.length;x++)
+    {
+  if(holder.indexOf(edata[x])==-1){
+      holder.push(edata[x]);
+  }      
+    }
+document.myform.textarea.value=holder.join('|');
+
+      
+        
+        
+        
+        
+        /*
+cup();
+        function cup(){
+   var test=document.getElementById("test");     
+cel(test);
+        
+        }
+function cel(data){
+    //console.log(data.children);
+for(var x=0;x<data.children.length;x++)
+    {
+    var c=data.children[x];
+    snode(c);
+    cel(c);
+    }
+}
+function snode(data){
+var bgcolor='#'+Math.random().toString(16).substr(-6);
+console.log(bgcolor);
+data.style.backgroundColor=bgcolor;
+data.classList.add('box');    
+    
+}    
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+ (function(){
+ var message="hello world";
+document.getElementById("output").innerHTML=message;
+     
+ })();     
+        
+    var myarr=["laurence","mike","larry"];
+    function shownames(){
+        console.log(arguments);
+    }
+    shownames(myarr);
+    */

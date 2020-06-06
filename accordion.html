@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+        .con{
+  border: 1px solid black;
+padding:20px;
+font-size: 0.8em;
+            display:none;
+            }
+        .acc{
+            font-size: 1.5em;
+            background-color: #ddd;
+        }
+        .active{
+display:block;}
+    </style>
+</head>
+
+<body>
+<div class="acc">Information about Javascript</div>
+<div class="con">Complete Javascript Course Complete Javascript Course Complete Javascript Course  Complete Javascript Course
+<img src="http://via.placeholder.com/350x150?text=Image1"></div>
+<div class="acc">More Read Javascript</div>
+<div class="con">Blah Blah Blah e<img src="http://via.placeholder.com/350x150?text=Image1"></div>
+<script>
+var atitle=document.querySelectorAll(".acc");
+var c=document.querySelectorAll(".con");
+for(var x=0;x<atitle.length;x++)
+{
+atitle[x].onclick=function(){
+closeocn(this.nextElementSibling);
+this.nextElementSibling.classList.toggle("active");
+}
+
+}
+function closeocn(t){
+  for(var x=0;x<c.length;x++)
+    {if(t!==c[x]){
+        
+    
+     c[x].classList.remove("active");     
+          
+      }
+}   
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</script>

@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <div id="wrapper">Complete JavaScript Course</div>
+    <form action="input.html" method="get" onsubmit="return valform()">
+       <input type="text" id="firstname"> 
+        <input type="text" id="lastename">    
+           <input type="text" id="age"> 
+        
+        
+        
+        
+        
+    <input type="submit" value="submit">    
+    </form>     
+    <script>
+    function valform(){
+    var p=event.target.children; 
+    if(p.firstname.value==""&&p.lastename.value==""&&p.age.value==""){
+        message("Needs a first Name");
+        return false;
+        
+    }
+     console.log(p.firstname);
+        return true;
+        
+    } 
+        function message(m)
+       {
+            
+            document.getElementById("wrapper").innerHTML=m
+        }
+         
+        
+        
+        
+</script>
+    </body></html>

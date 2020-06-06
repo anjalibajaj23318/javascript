@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+      .holder{
+            display: inline-block;
+            width:300px;
+            height: 300px;
+            border: 1px solid black;
+            padding: 10px;
+            
+        }
+        .active {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="message">Complete JavaScript Course</div>
+
+    <div class="holder"><div id="output"></div> </div>       
+        
+           <script> 
+document.querySelector(".holder").addEventListener("mouseover",function(){
+this.classList.add("active");
+})
+document.querySelector(".holder").addEventListener("mouseout",function(){
+this.classList.remove("active");
+})
+document.querySelector(".holder").addEventListener("mousemove",coordin);
+function coordin(){
+//console.log(event);
+var html="X:"+event.clientX+"|Y:"+event.clientY;
+document.getElementById("output").innerHTML=html;
+    
+}
+            
+               
+    </script>
+</body>
+
+</html>
